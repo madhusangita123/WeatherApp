@@ -17,7 +17,7 @@
             android:layout_gravity="center"
             android:text="10 Dec 2018"
             android:textSize="@dimen/medium_font"
-            android:textColor="@android:color/holo_blue_light"/>
+            android:textColor="@android:color/holo_red_dark"/>
         <TextView
             android:id="@+id/temperature_tv"
             android:layout_width="match_parent"
