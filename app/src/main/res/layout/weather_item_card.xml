@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/standard_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/standard_margin">
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_gravity="center"
+            android:text="10 Dec 2018"
+            android:textSize="@dimen/medium_font"
+            android:textColor="@android:color/holo_blue_light"/>
+        <TextView
+            android:id="@+id/temperature_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:text="Temparature from 5 to 8 C"
+            android:textSize="@dimen/medium_font"
+            android:textColor="@android:color/holo_blue_light"/>
+        <TextView
+            android:id="@+id/wind_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:text="wind 7.2 m/s"
+            android:textSize="@dimen/medium_font"
+            android:textColor="@android:color/holo_blue_light"/>
+
+        <TextView
+            android:id="@+id/cloud_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:text="clouds 75 %, 1025 hpa"
+            android:textSize="@dimen/medium_font"
+            android:textColor="@android:color/holo_blue_light"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

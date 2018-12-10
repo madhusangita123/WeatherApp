@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="serch_hint">Enter city</string>
+    <string name="no_connection">No internet connection!</string>
+    <string name="temp_string">Temperature from %s to %s \u2103</string>
+    <string name="wind_string">Wind %s meter/sec</string>
+    <string name="clouds_string">Clouds %d%%</string>
+</resources>
