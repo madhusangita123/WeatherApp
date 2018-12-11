@@ -119,19 +119,19 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnSugg
         Observable.just(searchText).observeOn( Schedulers.computation())
                 .map( new Function<String, Cursor>(){
                     @Override
-                    public Cursor apply(String searchStrt) throws Exception {
+                    public Cursor apply(String searchStrt)  {
                         return new SearchItemRepository( getApplication() ).getRecentsCursor(
                                 MainActivity.this, searchStrt);
                     }
                 }).observeOn( AndroidSchedulers.mainThread())
                 .subscribe( new Consumer<Cursor>() {
                     @Override
-                    public void accept(Cursor cursor) throws Exception {
+                    public void accept(Cursor cursor)  {
                         handleResults(cursor);
                     }
                 }, new Consumer<Throwable>() {
                     @Override
-                    public void accept(Throwable throwable) throws Exception {
+                    public void accept(Throwable throwable) {
                         //handleError( throwable );
                     }
                 } );
