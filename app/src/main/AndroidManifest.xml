@@ -3,6 +3,7 @@
     package="assignment.coding.maersk.weatherapp">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,6 +25,8 @@
         </activity>
         <provider android:name=".weatherapp.provider.RecentItemProvider"
             android:authorities="assignment.coding.maersk.weatherapp.weatherapp.provider.RecentItemProvider" />
+        <uses-library android:name="android.test.runner"
+            android:required="false" />
     </application>
 
 
