@@ -25,35 +25,9 @@ public abstract class SearchItemDatabase extends RoomDatabase {
     public static SearchItemDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (SearchItemDatabase.class) {
-                /* INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                         SearchItemDatabase.class, "search_item_database")
-                         // Wipes and rebuilds instead of migrating if no Migration object.
-                         // Migration is not part of this codelab.
-                         .fallbackToDestructiveMigration()
-                         .addCallback(sRoomDatabaseCallback)
-                         .build();*/
-                if (INSTANCE == null) {
-                    INSTANCE = Room.inMemoryDatabaseBuilder( context.getApplicationContext(), SearchItemDatabase.class ).build();
-                }
-            }
+                 INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+                         SearchItemDatabase.class, "search_item_database").build(); }
         }
         return INSTANCE;
     }
-
-    /**
-     * Override the onOpen method to populate the database.
-     * For this sample, we clear the database every time it is created or opened.
-     *
-     * If you want to populate the database only when the database is created for the 1st time,
-     * override RoomDatabase.Callback()#onCreate
-     */
-    private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
-
-        @Override
-        public void onOpen(@NonNull SupportSQLiteDatabase db) {
-            super.onOpen(db);
-
-        }
-    };
-
 }

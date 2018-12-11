@@ -2,6 +2,8 @@ package assignment.coding.maersk.weatherapp.weatherapp.repository;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
+import android.content.Context;
+import android.database.Cursor;
 import android.os.AsyncTask;
 
 import java.util.List;
@@ -25,6 +27,10 @@ public class SearchItemRepository {
         mAllItem = mSearchItemDao.getSearchItems(initial);
         return mAllItem;
     }
+    public Cursor getRecentsCursor(Context context, String query){
+        return mSearchItemDao.getRecentsCursor( query );
+    }
+
 
     public void insert(SearchItem item) {
         new insertAsyncTask(mSearchItemDao).execute(item);
